@@ -1,13 +1,11 @@
 const Message = {
      data() {
          return {
-             message: "My Message new",
-             id: 1000,
+             message: "Welcome to Flavuer",
          }
      }
 }
 const app = Vue.createApp(Message);
-
 
 // Define a new global component called button-counter
 app.component('button-counter', {

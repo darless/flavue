@@ -1,13 +1,14 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-<!-- Basic -->
-<div id="app">
-    <p>Message below</p>
-    <!-- This removes the need to use raw/endraw with mustache
-         since jina2 and vuejs both use the same format-->
-    <p :id="id" v-text="message"></p>
-    <button-counter></button-counter>
+<div id="demo_app">
+  <h1>Flavuer: Flask + VueJS</h1>
+  <p>Experiment with VueJS (next)</p>
+  <div id="app">
+      <p>Message below</p>
+      <p :id="id" v-text="message"></p>
+      <button-counter></button-counter>
+  </div>
 </div>
 <script src={{ url_for('static', filename='js/demo.js') }}></script>
 {% endblock body %}

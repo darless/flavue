@@ -20,7 +20,7 @@ def create(args):
   os.makedirs(project_name, exist_ok=True)
 
   # Create subdirectory with project name
-  project_subdir = os.path.join(project_name, project_name)
+  project_subdir = os.path.join(project_name, "app")
   if not os.path.exists(project_subdir):
     shutil.copytree(template_app, project_subdir)
 
@@ -39,4 +39,4 @@ def create(args):
 
 def run_dev(args):
   print("Starting dev environment")
-  os.system("export FLASK_DEBUG=1; export FLASK_APP=bob; ./venv/bin/flask run")
+  os.system("export FLASK_DEBUG=1; export FLASK_APP=app; ./venv/bin/flask run")
