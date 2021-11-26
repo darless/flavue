@@ -39,4 +39,4 @@ def create(args):
 
 def run_dev(args):
   print("Starting dev environment")
-  os.system("FLASK_DEBUG=1 && FLASK_APP=bob && flask run")
+  os.system("export FLASK_DEBUG=1; export FLASK_APP=bob; ./venv/bin/flask run")
